@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Core.Extensions
+namespace trnsACT.Core.Extensions
 {
     public static partial class ApplicationExtensions
     {

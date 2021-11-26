@@ -1,4 +1,4 @@
-﻿namespace Core.Resources
+﻿namespace trnsACT.Core.Resources
 {
     public interface IResource
     {

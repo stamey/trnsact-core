@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Core.Features
+namespace trnsACT.Core.Features
 {
     public interface IFeatureService<T>
     {

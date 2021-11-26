@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Core.Features
+namespace trnsACT.Core.Features
 {
     public interface IDataService<T>
     {

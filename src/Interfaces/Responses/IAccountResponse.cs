@@ -1,4 +1,4 @@
-﻿namespace Core.Interfaces.Responses
+﻿namespace trnsACT.Core.Interfaces.Responses
 {
     public interface IAccountResponse
     {

@@ -1,4 +1,4 @@
-﻿namespace Core.Interfaces.Requests
+﻿namespace trnsACT.Core.Interfaces.Requests
 {
     public interface IApiRequest
     {

@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel;
-using Core.Errors;
+using trnsACT.Core.Errors;
 
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static partial class ProblemExtensions

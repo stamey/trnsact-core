@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
-using Core.Configuration;
+using trnsACT.Core.Configuration;
 
-namespace Core.Errors
+namespace trnsACT.Core.Errors
 {
     /// <summary>
     /// API Error response based upon the Problem Details class

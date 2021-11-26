@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace Core.Interfaces.Responses
+namespace trnsACT.Core.Interfaces.Responses
 {
     public interface IUserResponse : IContactResponse
     {

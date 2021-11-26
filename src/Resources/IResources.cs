@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Core.Resources
+namespace trnsACT.Core.Resources
 {
     interface IResources
     {

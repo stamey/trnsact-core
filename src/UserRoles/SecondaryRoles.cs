@@ -1,4 +1,4 @@
-﻿namespace Core.UserRoles
+﻿namespace trnsACT.Core.UserRoles
 {
     public static partial class SecondaryRoles
     {

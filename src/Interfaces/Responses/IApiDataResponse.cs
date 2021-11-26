@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Core.Interfaces.Responses
+namespace trnsACT.Core.Interfaces.Responses
 {
     public interface IApiDataResponse<T> : IApiResponse
     {

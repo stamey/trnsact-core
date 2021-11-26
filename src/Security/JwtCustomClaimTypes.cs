@@ -1,4 +1,4 @@
-﻿namespace Core.Security
+﻿namespace trnsACT.Core.Security
 {
     public static class JwtCustomClaimTypes
     {

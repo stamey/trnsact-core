@@ -1,4 +1,4 @@
-﻿namespace Core.Errors
+﻿namespace trnsACT.Core.Errors
 {
     public class InvalidParameter : IInvalidParameter
     {

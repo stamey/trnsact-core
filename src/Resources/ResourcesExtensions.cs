@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Core.Resources
+namespace trnsACT.Core.Resources
 {
     public static class ResourcesExtensions
     {

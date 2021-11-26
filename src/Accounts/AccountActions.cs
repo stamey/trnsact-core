@@ -1,4 +1,4 @@
-﻿namespace Core.Accounts
+﻿namespace trnsACT.Core.Accounts
 {
     public static class AccountActions
     {

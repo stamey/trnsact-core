@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Core.Errors
+namespace trnsACT.Core.Errors
 {
     public interface IProblem
     {

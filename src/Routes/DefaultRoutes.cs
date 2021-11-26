@@ -1,4 +1,4 @@
-﻿namespace Core.Routes
+﻿namespace trnsACT.Core.Routes
 {
     public static class DefaultRoute
     {
