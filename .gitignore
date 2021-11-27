@@ -12,6 +12,7 @@ test\results
 tools
 .vscode/
 .vs/
+*.sln
 
 # User-specific files
 *.rsuser
