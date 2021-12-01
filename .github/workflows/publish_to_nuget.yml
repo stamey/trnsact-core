@@ -24,6 +24,6 @@ jobs:
       with:
         PROJECT_FILE_PATH: trnsACT.Core.csproj
         PACKAGE_NAME: trnsACT.Core
-        VERSION_REGEX: ‘^\s*<Version>(.*)<\/Version>\s*$’
-        TAG_FORMAT: ‘*’
+        VERSION_REGEX: '^\s*<Version>(.*)<\/Version>\s*$'
+        TAG_FORMAT: '*'
         NUGET_KEY: ${{secrets.trnsACT_NUGET_KEY_EXP_20221130}}
