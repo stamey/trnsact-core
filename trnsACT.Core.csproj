@@ -6,9 +6,9 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Joel Stamey</Authors>
     <Product>trnsACT</Product>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Description>Base classes and abstractions for trnsACT enterprise solution.</Description>
-    <Copyright>© Joel Stamey 2021</Copyright>
+    <Copyright>© Joel Stamey 2022</Copyright>
     <PackageIcon>trnsact_128.png</PackageIcon>
     <PackageProjectUrl>https://github.com/stamey/trnsACT2022</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stamey/trnsact-core</RepositoryUrl>
@@ -17,14 +17,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-      <None Include="assets\trnsact_128.png" Pack="true" PackagePath=""/>
+      <None Include="assets\trnsact_128.png" Pack="true" PackagePath="" />
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="6.0.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.14.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="6.0.6" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.21.0" />
     <PackageReference Include="System.Security.Claims" Version="4.3.0" />
-    <PackageReference Include="System.Text.Json" Version="6.0.0" />
+    <PackageReference Include="System.Text.Json" Version="6.0.5" />
   </ItemGroup>
 
 </Project>
