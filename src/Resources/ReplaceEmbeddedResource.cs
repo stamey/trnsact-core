@@ -6,7 +6,7 @@ namespace trnsACT.Core.Resources
     {
         public static string ReplaceEmbeddedResource(string textToEvaluate,
                                                      string locale,
-                                                     List<Resource> resources)
+                                                     IList<Resource> resources)
         {
             string result = textToEvaluate;
             if (textToEvaluate != string.Empty)

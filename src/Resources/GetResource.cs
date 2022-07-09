@@ -5,10 +5,10 @@ namespace trnsACT.Core.Resources
 {
     public static partial class ResourcesExtensions
     {
-        public static Resource GetResource(this string reference,
-                                                string locale,
-                                                List<Resource> resources,
-                                                string defaultLocale = "en-US")
+        public static Resource GetResource(string reference,
+                                           string locale,
+                                           IList<Resource> resources,
+                                           string defaultLocale = "en-US")
         {
             if (resources != null)
             {

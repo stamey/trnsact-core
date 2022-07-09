@@ -6,7 +6,7 @@ namespace trnsACT.Core.Resources
     {
         public static string GetText(this string reference,
                                           string locale,
-                                          List<Resource> resources,
+                                          IList<Resource> resources,
                                           string defaultLocale = "en-US")
         {
             string resourceText = GetResource(reference, locale, resources, defaultLocale)?.text;
