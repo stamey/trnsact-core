@@ -13,6 +13,8 @@ tools
 .vscode/
 .vs/
 *.sln
+tools
+
 
 # User-specific files
 *.rsuser
