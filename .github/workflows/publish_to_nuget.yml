@@ -49,5 +49,5 @@ jobs:
     - name: Publish to NuGet
       run: |
         find . -name '*.nupkg' -exec dotnet nuget push "{}" -s https://api.nuget.org/v3/index.json -k ${{secrets.trnsACT_NUGET_KEY_EXP_20221130}} --skip-duplicate \;
-        find . -name '*.snupkg' -exec dotnet nuget push "{}" -s https://api.nuget.org/v3/index.json -k ${{secrets.trnsACT_NUGET_KEY_EXP_20221130}}\;
+        find . -name '*.snupkg' -exec dotnet nuget push "{}" -s https://api.nuget.org/v3/index.json -k ${{secrets.trnsACT_NUGET_KEY_EXP_20221130}} --skip-duplicate \;
       shell: bash
