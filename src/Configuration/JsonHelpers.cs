@@ -6,6 +6,11 @@ using System.Text.Json.Serialization;
 
 namespace trnsACT.Core.Configuration
 {
+    /// <summary>
+    /// Class to allow attribute for handling json conversion in older versions of .NET
+    /// For .NET 5+, use native attribute 
+    /// [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
+    /// </summary>
     public class StringToIntConverter : JsonConverter<int>
     {
         public override int Read(ref Utf8JsonReader reader, Type type, JsonSerializerOptions options)

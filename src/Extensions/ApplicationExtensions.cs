@@ -5,22 +5,55 @@ namespace trnsACT.Core.Extensions
 {
     public static partial class ApplicationExtensions
     {
-        public static bool ToBool(this string @this)
+        public static bool IsNumeric(this string input)
+        {
+            long retNum;
+            return long.TryParse(input, System.Globalization.NumberStyles.Integer, System.Globalization.NumberFormatInfo.InvariantInfo, out retNum);
+        }
+
+        public static bool IsDate(this string input)
+        {
+            DateTime dt;
+            return string.IsNullOrEmpty(input) ? false : (DateTime.TryParse(input, out dt));
+        }
+
+        public static bool ToBool(this string input)
         {
             try
             {
-                if (@this == null) return false;
-                @this = @this.Trim().ToLower();
-                if (@this == "true") return true;
-                if (@this == "1") return true;
-                if (@this == "yes") return true;
-                if (@this == "y") return true;
+                if (string.IsNullOrEmpty(input)) return false;
+                if (input == null) return false;
+                input = input.Trim().ToLower();
+                if (input == "true") return true;
+                if (input == "1") return true;
+                if (input == "yes") return true;
+                if (input == "y") return true;
                 return false;
             }
             catch
             {
                 return false;
             }
+        }
+
+        public static DateTime ToDate(this string input, bool throwExceptionIfFailed = false)
+        {
+            DateTime result;
+            var valid = DateTime.TryParse(input, out result);
+            if (!valid)
+                if (throwExceptionIfFailed)
+                    throw new FormatException(string.Format("'{0}' cannot be converted as DateTime", input));
+            return result;
+        }
+
+        public static int ToInt(this string input, bool throwExceptionIfFailed = false)
+        {
+            int result;
+            var valid = int.TryParse(input, out result);
+            if (!valid)
+                if (throwExceptionIfFailed)
+                    throw new FormatException(string.Format("'{0}' cannot be converted as int", input));
+            return result;
         }
 
         public static bool NotContains<T>(this List<T> list, T item)
