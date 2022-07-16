@@ -401,7 +401,7 @@ namespace trnsACT.Core.Localization
         public const string NorthNdebeleZW = "nd-ZW";
         public const string NorwegianBokmalNO = "nb-NO";
         public const string NorwegianNynorskNO = "nn-NO";
-        public const string NorwegianBokmålSJ = "nb-SJ";
+        public const string NorwegianBokmlSJ = "nb-SJ";
         public const string NuerSD = "nus-SD";
         public const string NuerSS = "nus-SS";
         public const string NyankoleUG = "nyn-UG";
@@ -567,7 +567,7 @@ namespace trnsACT.Core.Localization
         public const string Valenciania = "ca-ES-valencia";
         public const string VendaZA = "ve-ZA";
         public const string VietnameseVN = "vi-VN";
-        public const string Volapük01 = "vo-001";
+        public const string Volapk01 = "vo-001";
         public const string VunjoTZ = "vun-TZ";
         public const string WalserCH = "wae-CH";
         public const string WelshGB = "cy-GB";
