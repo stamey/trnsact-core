@@ -15,7 +15,7 @@ namespace trnsACT.Core.Resources
         [JsonPropertyName(CultureNames.FrenchCA)]
         public List<Resource> french { get; set; }
 
-        [JsonPropertyName(CultureNames.German)]
+        [JsonPropertyName(CultureNames.GermanDE)]
         public List<Resource> german { get; set; }
 
     }
