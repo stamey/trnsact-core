@@ -7,6 +7,7 @@
         public const string Confirm = "confirm";
         public const string Deny = "active";
         public const string Impersonate = "impersonate";
+        public const string LogIn = "login";
         public const string LogOn = "logon";
         public const string ResetPassword = "resetpassword";
         public const string SignIn = "signin";
