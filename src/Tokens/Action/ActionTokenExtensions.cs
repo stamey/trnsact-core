@@ -20,7 +20,8 @@ namespace trnsACT.Core.Tokens
                                                 settings.Secret,
                                                 token.ExpirationInMinutes,
                                                 token.Action,
-                                                token.Reference
+                                                token.Reference,
+                                                token.Locale
                                               );
         }
 
@@ -31,7 +32,8 @@ namespace trnsACT.Core.Tokens
                                                           string Secret,
                                                           int ExpirationInMinutes,
                                                           string Action,
-                                                          string Reference = "true")
+                                                          string Reference = "true",
+                                                          string Locale = "en-us")
         {
             List<Claim> claims = new List<Claim>
             {
@@ -40,7 +42,8 @@ namespace trnsACT.Core.Tokens
                 new Claim(JwtCustomClaimTypes.SecurityStamp, SecurityStamp, ClaimValueTypes.String),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString(), ClaimValueTypes.String),
                 new Claim(JwtCustomClaimTypes.Reference, Reference, ClaimValueTypes.String),
-                new Claim(JwtCustomClaimTypes.Action, Action, ClaimValueTypes.String)
+                new Claim(JwtCustomClaimTypes.Action, Action, ClaimValueTypes.String),
+                new Claim(JwtCustomClaimTypes.Locale, Locale, ClaimValueTypes.String)
             };
             var claimArray = claims.ToArray();
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Secret));
@@ -92,6 +95,9 @@ namespace trnsACT.Core.Tokens
                         case JwtCustomClaimTypes.Referrer:
                             result.Token.Referrer = claim.Value;
                             break;
+                        case JwtCustomClaimTypes.Locale:
+                            result.Token.Locale = claim.Value;
+                            break;                            
                     }
                 }
                 TokenValidationResult validation = token.Evaluate(settings.Secret, result.Token.CompanyId.ToString());
