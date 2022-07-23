@@ -1,8 +1,9 @@
 ﻿namespace trnsACT.Core.Errors
 {
-    public class InvalidParameter : IInvalidParameter
+    public class Error : IError
     {
-        public string Name { get; set; }
+        public string Code { get; set; }
         public string Message { get; set; }
+        public string Name { get; set; }
     }
 }

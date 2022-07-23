@@ -4,15 +4,16 @@ using trnsACT.Core.Errors;
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static partial class ProblemExtensions
 {
-    public static string InvalidParmetersToHTMLList(this Problem problem)
+    public static string ErrorsToHTMLList(this Problem problem)
     {
         string list = string.Empty;
-        if (problem.InvalidParameters?.Count > 0)
+        if (problem.Errors?.Count > 0)
         {
             list = $"<ul>{problem.Detail}";
-            foreach (InvalidParameter item in problem.InvalidParameters)
+            foreach (Error item in problem.Errors)
             {
-                list += $"<li>{item.Message}</li>";
+                string message = (item.Code.Equals("0")) ? item.Message : item.Message + $" ({item.Code})"; 
+                list += $"<li>{message}</li>";
             }
             list += "</ul>";
         }

@@ -10,11 +10,11 @@ namespace trnsACT.Core.Errors
     /// <comments>Modeled after https://tools.ietf.org/html/rfc7807</comments>
     public class Problem
     {
-        private List<InvalidParameter> problems;
+        private List<Error> errors;
 
         public Problem()
         {
-            problems = new List<InvalidParameter>();
+            errors = new List<Error>();
             Title = @"An error was found in the information submitted.";
         }
 
@@ -31,10 +31,10 @@ namespace trnsACT.Core.Errors
         [JsonPropertyName("instance")]
         public string Instance { get; set; }
 
-        public List<InvalidParameter> InvalidParameters
+        public List<Error> Errors
         {
-            get { return problems; }
-            set { problems = value; }
+            get { return errors; }
+            set { errors = value; }
         }
 
         //

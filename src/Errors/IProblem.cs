@@ -6,7 +6,7 @@ namespace trnsACT.Core.Errors
     {
         string Detail { get; set; }
         string Instance { get; set; }
-        List<InvalidParameter> InvalidParameters { get; set; }
+        List<Error> Errors { get; set; }
         int Status { get; set; }
         string Title { get; }
         string Type { get; }
