@@ -21,6 +21,7 @@ namespace trnsACT.Core.Tokens
         {
             TokenValidationResult result = new TokenValidationResult();
             result.IsValid = false;
+            result.IsExpired = false;
             // Create token validation parameters for the signed JWT
             // This object will be used to verify the cryptographic signature of the received JWT
             byte[] encodedSecret = Encoding.ASCII.GetBytes(secret);
@@ -50,6 +51,7 @@ namespace trnsACT.Core.Tokens
                 result.Message = e.Message;
                 result.Message = "Token has expired.";
                 result.IsValid = false;
+                result.IsExpired = true;
             }
             catch (SecurityTokenInvalidAudienceException e)
             {
@@ -62,12 +64,14 @@ namespace trnsACT.Core.Tokens
                 result.Message = e.Message;
                 result.Message = "Token has expired.";
                 result.IsValid = false;
+                result.IsExpired = true;
             }
             catch (SecurityTokenNotYetValidException e)
             {
                 result.Message = e.Message;
                 result.Message = "Token has expired.";
                 result.IsValid = false;
+                result.IsExpired = true;
             }
             catch (Exception e)
             {

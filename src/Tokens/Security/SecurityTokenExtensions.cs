@@ -11,6 +11,7 @@ namespace trnsACT.Core.Tokens
         {
             SecurityTokenValidationResult result = new SecurityTokenValidationResult();
             result.IsValid = false;
+            result.IsExpired = false;
             result.Token = new SecurityToken();
             var jwtHandler = new JwtSecurityTokenHandler();
             if (jwtHandler.CanReadToken(token))
@@ -58,6 +59,7 @@ namespace trnsACT.Core.Tokens
                         case JwtRegisteredClaimNames.Jti:
                         case JwtCustomClaimTypes.Role:
                         case JwtRegisteredClaimNames.Email:
+                        case JwtCustomClaimTypes.Locale:
                             // Do not add to claims list
                             break;
                         default:
@@ -66,16 +68,9 @@ namespace trnsACT.Core.Tokens
                     } 
                 }
                 TokenValidationResult validation = token.Evaluate(settings.Secret, result.Token.CompanyId.ToString());
-                if (validation.IsValid)
-                {
-                    result.IsValid = true;
-                }
-                else
-                {
-                    //Error validating token credentials
-                    result.IsValid = false;
-                    result.Message = validation.Message;
-                }
+                result.IsValid = validation.IsValid;
+                result.IsExpired = validation.IsExpired;
+                if (!result.IsValid) result.Message = validation.Message;
             }
             else
             {

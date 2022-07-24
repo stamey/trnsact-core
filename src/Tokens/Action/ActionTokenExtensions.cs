@@ -101,16 +101,9 @@ namespace trnsACT.Core.Tokens
                     }
                 }
                 TokenValidationResult validation = token.Evaluate(settings.Secret, result.Token.CompanyId.ToString());
-                if (validation.IsValid)
-                {
-                    result.IsValid = true;
-                }
-                else
-                {
-                    //Error validating token credentials
-                    result.IsValid = false;
-                    result.Message = validation.Message;
-                }
+                result.IsValid = validation.IsValid;
+                result.IsExpired = validation.IsExpired;
+                if (!result.IsValid) result.Message = validation.Message;
             }
             else
             {
