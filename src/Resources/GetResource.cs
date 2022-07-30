@@ -8,7 +8,8 @@ namespace trnsACT.Core.Resources
         public static Resource GetResource(string reference,
                                            string locale,
                                            IList<Resource> resources,
-                                           string defaultLocale = "en-US")
+                                           string defaultLocale = "en-US",
+                                           string defaultText = "")
         {
             if (resources != null)
             {
@@ -21,7 +22,10 @@ namespace trnsACT.Core.Resources
                 var result = selected?.FirstOrDefault();
                 if (result != null) return result;
             }
-            return new Resource { text = reference, locale = locale };
+            return new Resource { 
+                                    text = (defaultText == "") ? reference : defaultText, 
+                                    locale = (string.IsNullOrEmpty(locale)) ? defaultLocale : locale 
+                                };
         }
     }
 }
