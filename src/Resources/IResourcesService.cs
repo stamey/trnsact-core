@@ -6,6 +6,8 @@ namespace trnsACT.Core.Resources
     {
         IList<Resource> FindAll();
 
-        Resource Find(string reference, string locale = "");
+        Resource Find(string reference, 
+                      string locale = "", 
+                      string text = "");
     }
 }
