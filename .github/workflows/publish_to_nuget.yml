@@ -40,7 +40,7 @@ jobs:
 
      # This step packs the project
     - name: Run Pack
-      run: dotnet pack trnsACT.Core.csproj -o ./artifacts --configuration ${{ env.config }}
+      run: dotnet pack library.csproj -o ./artifacts --configuration ${{ env.config }}
       shell: bash   
 
     # Find all the created nupkg files and publish it to NuGet, we use the wonderful swiss-army knife capability `find -exec` to find and then execute an action on it.
