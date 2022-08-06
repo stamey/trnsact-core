@@ -3,7 +3,7 @@
 namespace trnsACT.Core.Interfaces.Requests
 {
     public interface IActionRequest : IApiRequest,
-                                     IAction
+                                      IAction
     {
 
     }

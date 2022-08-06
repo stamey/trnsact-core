@@ -1,8 +1,7 @@
 ﻿namespace trnsACT.Core.Interfaces.Requests
 {
-    public interface IApiRequest
+    public interface IApiRequest: ILocaleRequest
     {
         int CompanyId { get; set; }
-        string Locale { get; set; }
     }
 }
