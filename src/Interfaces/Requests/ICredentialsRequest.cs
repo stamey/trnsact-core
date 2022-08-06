@@ -1,8 +1,7 @@
 ﻿namespace trnsACT.Core.Interfaces.Requests
 {
-    public interface ICredentialsRequest
+    public interface ICredentialsRequest : IIdentityRequest
     {
         string Password { get; set; }
-        string Username { get; set; }
     }
 }
