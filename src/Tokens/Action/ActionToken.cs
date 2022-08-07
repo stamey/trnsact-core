@@ -8,7 +8,7 @@
         public string Locale { get; set; }
         public string Name { get; set; }
         public string Reference { get; set; }
-        public string Referrer { get; set; }
+        public string Referer { get; set; }
         public string SecurityStamp { get; set; }
     }
 }

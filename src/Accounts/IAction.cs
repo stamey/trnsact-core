@@ -4,6 +4,6 @@
     {
         string Action { get; set; }
         string Reference { get; set; }
-        string Referrer { get; set; }
+        string Referer { get; set; }
     }
 }

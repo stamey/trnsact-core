@@ -16,6 +16,6 @@ namespace trnsACT.Core.Tokens
         public string Name { get; set; }
         public string Role { get; set; }
         public string SecurityStamp { get; set; }
-        public string Referrer { get; set; }
+        public string Referer { get; set; }
     }
 }

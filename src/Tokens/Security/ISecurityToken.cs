@@ -8,6 +8,6 @@ namespace trnsACT.Core.Tokens
         IList<Claim> Claims { get; set; }
         string EmailAddress { get; set; }
         string Role { get; set; }
-        string Referrer { get; set; }
+        string Referer { get; set; }
     }
 }

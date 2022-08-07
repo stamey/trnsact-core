@@ -6,7 +6,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Joel Stamey</Authors>
     <Product>trnsACT</Product>
-    <Version>1.3.0</Version>
+    <Version>1.3.1</Version>
     <Description>Base classes and abstractions for trnsACT enterprise solution.</Description>
     <Copyright>© Joel Stamey 2022</Copyright>
     <PackageIcon>trnsact_128.png</PackageIcon>

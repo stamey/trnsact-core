@@ -92,8 +92,8 @@ namespace trnsACT.Core.Tokens
                         case JwtRegisteredClaimNames.Aud:
                             result.Token.CompanyId = int.Parse(claim.Value);
                             break;
-                        case JwtCustomClaimTypes.Referrer:
-                            result.Token.Referrer = claim.Value;
+                        case JwtCustomClaimTypes.Referer:
+                            result.Token.Referer = claim.Value;
                             break;
                         case JwtCustomClaimTypes.Locale:
                             result.Token.Locale = claim.Value;
