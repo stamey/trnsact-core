@@ -17,5 +17,6 @@
         public const string SignOff = "signoff";
         public const string Unexpire = "unexpire";
         public const string Unlock = "unlock";
+        public const string Unsubscribe = "unsubscribe";
     }
 }
