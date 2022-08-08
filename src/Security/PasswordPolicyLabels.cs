@@ -1,6 +1,5 @@
 namespace trnsACT.Core.Security
-{
-    public static partial class Results
+{   public static partial class SecurityLabels
     {
         public static class PasswordPolicy
         {
