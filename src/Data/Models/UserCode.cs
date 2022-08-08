@@ -12,6 +12,7 @@ namespace trnsACT.Core.Data.Models
         public string Value { get; set; }
         public DateTimeOffset Expiry { get; set; }
         public DateTimeOffset? RedeemedDate { get; set; }
+        public string Locale { get; set; }
         public DateTimeOffset CreatedDate { get; set; }
         public byte[] RowVer { get; set; }
         public virtual AppUser User { get; set; }
